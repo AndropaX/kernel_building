@@ -1,0 +1,13 @@
+# Fingerprint access
+allow system_server fingerprint_device:chr_file rw_file_perms;
+
+# For touchscreen proc files
+allow system_server proc_touchscreen:dir search;
+allow system_server proc_touchscreen:file rw_file_perms;
+
+# For sensor calibration files
+allow system_server persist_file:dir rw_dir_perms;
+allow system_server persist_file:file rw_file_perms;
+
+# Consumer IR
+allow system_server lirc_device:chr_file rw_file_perms;

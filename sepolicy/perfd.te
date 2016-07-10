@@ -1,0 +1,8 @@
+allow perfd sysfs_performance:dir search;
+allow perfd sysfs_performance:file rw_file_perms;
+
+allow perfd proc_kernel_sched:file rw_file_perms;
+
+# access to /sys/module/lpm_levels/parameters/sleep_disabled
+allow perfd sysfs_power_management:file w_file_perms;
+allow perfd mpctl_socket:file create_file_perms;
