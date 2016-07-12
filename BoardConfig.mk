@@ -159,9 +159,6 @@ BOARD_SEPOLICY_DIRS += \
 
 TARGET_USES_64_BIT_BINDER := true
 
-# Disable ashmem size tracking
-COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
-
 TARGET_USES_AOSP := true
 TARGET_USES_INTERACTION_BOOST := true
 
@@ -177,6 +174,9 @@ TARGET_PER_MGR_ENABLED := true
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+
+# Sensors
+TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
